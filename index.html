@@ -1,0 +1,118 @@
+
+```html
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Site Acessível — Reescrita</title>
+  <meta name="description" content="Exemplo de site acessível com HTML semântico, navegação por teclado e contraste adequado.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Skip link para pular navegação -->
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="/" class="logo" aria-label="Página inicial do Site Acessível">
+        <img src="images/logo.png" alt="Logo do Site Acessível" width="120" height="40">
+      </a>
+
+      <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="visually-hidden">Abrir menu</span>
+        ☰
+      </button>
+
+      <nav id="primary-navigation" class="primary-nav" role="navigation" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#main">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main" class="site-main" role="main">
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <h1 id="hero-title">Bem-vindo ao Site Acessível</h1>
+        <p>Exemplo prático de acessibilidade: navegação por teclado, contraste alto e elementos semânticos.</p>
+        <a class="btn" href="#sobre">Saiba mais</a>
+      </div>
+    </section>
+
+    <section id="sobre" class="sobre" aria-labelledby="sobre-title">
+      <div class="container">
+        <h2 id="sobre-title">Sobre</h2>
+        <p>Este projeto demonstra práticas recomendadas de acessibilidade web: uso correto de cabeçalhos, texto alternativo para imagens, foco visível, e formulários etiquetados.</p>
+      </div>
+    </section>
+
+    <section id="servicos" class="servicos" aria-labelledby="servicos-title">
+      <div class="container">
+        <h2 id="servicos-title">Serviços</h2>
+        <ul>
+          <li>
+            <article aria-labelledby="s1-title">
+              <h3 id="s1-title">Avaliação de Acessibilidade</h3>
+              <p>Relatórios e recomendações para melhorar a acessibilidade do seu site.</p>
+            </article>
+          </li>
+          <li>
+            <article aria-labelledby="s2-title">
+              <h3 id="s2-title">Consultoria</h3>
+              <p>Implementação de padrões WCAG e testes com usuários reais.</p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contato" class="contato" aria-labelledby="contato-title">
+      <div class="container">
+        <h2 id="contato-title">Contato</h2>
+
+        <form id="contactForm" action="#" method="post" novalidate>
+          <div class="form-row">
+            <label for="name">Nome</label>
+            <input id="name" name="name" type="text" required aria-required="true">
+          </div>
+
+          <div class="form-row">
+            <label for="email">E‑mail</label>
+            <input id="email" name="email" type="email" required aria-required="true">
+          </div>
+
+          <div class="form-row">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+          </div>
+
+          <div class="form-row">
+            <button type="submit" class="btn">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Site Acessível — Todos os direitos reservados.</p>
+      <p>
+        <a href="#" id="toggleContrast" class="contrast-toggle">Alternar contraste alto</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
+```
+
+---
